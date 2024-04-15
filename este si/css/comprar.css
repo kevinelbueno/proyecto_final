@@ -1,0 +1,109 @@
+
+.navbar-brand img {
+    max-height: 30px; /* Reducir aún más la altura máxima del logo */
+    width: auto; /* Ancho automático para mantener la proporción */
+}
+/* Estilos para la página de productos */
+.container {
+    width: 80%; /* Establece el ancho del contenedor al 80% del ancho del viewport */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: #bbb9b9; /* Color de fondo del encabezado */
+    color: #fff; /* Color del texto del encabezado */
+    padding: 20px 0; /* Añade relleno de 20px arriba y abajo */
+}
+
+header h1 {
+    margin: 0; /* Elimina el margen predeterminado del título h1 */
+}
+
+/* Estilos para la barra de navegación */
+nav ul {
+    list-style: none; /* Elimina los puntos de lista */
+    padding: 0; /* Elimina el relleno predeterminado */
+}
+
+nav ul li {
+    display: inline; /* Muestra los elementos de lista en línea */
+    margin-right: 20px; /* Añade un margen derecho de 20px entre los elementos de lista */
+}
+
+nav ul li a {
+    color: #fff; /* Color del texto del enlace */
+    text-decoration: none; /* Elimina la decoración de subrayado del enlace */
+}
+
+/* Estilos para los elementos de producto */
+.panpan {
+    background-color: #b8d6dd; /* Color de fondo de los elementos de producto */
+    border-radius: 5px; /* Establece un radio de borde de 5px */
+    box-shadow: 0 0 10px rgba(171, 196, 180, 0.1); /* Agrega una sombra suave */
+    margin-bottom: 30px; /* Añade un margen inferior de 30px */
+    padding: 20px; /* Añade relleno de 20px dentro del elemento */
+    text-align: center; /* Centra el contenido horizontalmente */
+    width: calc(33.33% - 40px); /* Ajusta el ancho para mostrar 3 elementos por fila */
+    margin-right: 20px; /* Añade un margen derecho de 20px entre los elementos */
+    float: left; /* Hace que los elementos floten a la izquierda */
+    position: relative; /* Para establecer una referencia para los botones */
+}
+
+.panpan img {
+    max-width: 100%; /* Establece el ancho máximo de la imagen al 100% del contenedor */
+    border-radius: 5px; /* Establece un radio de borde de 5px para la imagen */
+}
+
+.producto .precio {
+    display: block; /* Muestra el precio como un bloque */
+    font-size: 18px; /* Establece el tamaño de fuente del precio */
+    margin-bottom: 10px; /* Añade un margen inferior de 10px */
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: #922d2d; /* Color de fondo del pie de página */
+    color: #fff; /* Color del texto del pie de página */
+    padding: 20px 0; /* Añade relleno de 20px arriba y abajo */
+    text-align: center; /* Centra el contenido horizontalmente */
+}
+
+footer p {
+    margin: 0; /* Elimina el margen predeterminado del párrafo dentro del pie de página */
+}
+
+.agregar-carrito, .ver-detalles {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+    margin-right: 5%;
+    width: 180px; /* Establece un ancho fijo para ambos botones */
+    font-weight: bold; /* Aumenta el grosor del texto */
+    font-size: 16px; /* Ajusta el tamaño de la fuente */
+    max-width: calc(100% - 40px); /* Ancho máximo igual al 100% menos el padding horizontal */
+    width: 180px; /* Ancho fijo */
+}
+
+.agregar-carrito:hover, .ver-detalles:hover {
+    background-color: #0056b3;
+}
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .agregar-carrito, .ver-detalles {
+        margin-right: 0;
+        margin-bottom: 10px;
+        display: block;
+        width: 100%;
+        max-width: 100%; /* Ancho máximo igual al 100% */
+        width: 100%; /* Ancho igual al 100% */
+    }
+}
