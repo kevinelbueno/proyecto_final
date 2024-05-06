@@ -1,31 +1,36 @@
 /* Estilos para la página de inicio */
+.navbar {
+    max-width: 200%;
+    display: flex;
+    justify-content: space-between; /* Distribuye los elementos a los extremos */
+    align-items: center;
+    background-color: #0d98b1 !important; /* Color de fondo de la barra de navegación */
+    padding: 10px 20px; /* Espaciado interno */
+}
+
 .navbar-brand img {
-    max-height: 30px; /* Reducir aún más la altura máxima del logo */
+    max-height: 30px; /* Reducir la altura máxima del logo */
     width: auto; /* Ancho automático para mantener la proporción */
     border-radius: 25px;
 }
 
-.banner_pagina {
-   
-    background-image: url('/img/imagen.png');
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-    text-align: center;
-    width: 100%; /* Cambiamos 'max-width' a 'width' */
-    height: auto; /* Esto no es necesario para el fondo */
-    padding: 20px 0;
-    position: fixed; /* Hacemos que el banner sea fijo */
-    bottom: 0; /* Lo colocamos en la parte inferior de la ventana */
-    margin-bottom: 60px; /* Margen inferior para evitar que tape el pie de página */
-    z-index: 999; /* Aseguramos que esté por encima de otros elementos */
-
-    
+.navbar-nav {
+    display: flex;
+    align-items: center; /* Centra los elementos verticalmente */
 }
 
-.banner {
-    width: 100%; /* Cambiamos 'max-width' a 'width' */
-    height: auto; /* Esto no es necesario para el fondo */
+.navbar-nav .nav-item {
+    margin-right: 15px; /* Espaciado entre elementos */
+}
+.contenedor_presentacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.presentacion {
+    text-align: center;
+    margin-top: 20px; /* Espacio superior para separar del contenido anterior */
 }
 
 .btn {
@@ -43,10 +48,11 @@
 }
 
 .pie_depagina {
+    
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: #363636;
+    background-color: #20969e;
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -67,34 +73,41 @@ body {
 }
 
 .tarjeta {
-   
-    margin: 0 auto;
-    width: 90%; /* Cambiamos el ancho al 100% */
-    max-width: 60px; /* Por ejemplo, puedes establecer un ancho máximo */
     display: flex;
+    justify-content: space-around; /* Distribuye el espacio horizontalmente */
     align-items: center;
-    
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan cuando no haya suficiente espacio */
 }
 
+
 .pan {
+    max-width: 200vh;
+    width: 100vh; ;
+    max-height: 100vh;
     height: 60vh; /* Por ejemplo, establecer la altura al 50% del alto de la pantalla */
     display: flex;
     flex-wrap: nowrap;
     justify-content: start;
     position: absolute;
+    
 }
 .block{
-    margin: 0 auto; /* Centramos el contenedor horizontalmente */
-    height: 70vh; /* Por ejemplo, establecer la altura al 70% del alto de la pantalla */
-    width: auto; /* Mantener el ancho automático para que se ajuste al contenido */
-    position: relative;
-    display: flex; /* Utilizamos flexbox */
-    justify-content: center; /* Centramos los elementos horizontalmente */
-    align-items: center; /* Centramos los elementos verticalmente */
+    width: 100%; /* Ancho del bloque en porcentaje */
+    max-width: 800px; /* Ancho máximo del bloque */
+    margin: 2vw auto 5vw; /* Margen superior e inferior en función del ancho de la ventana */
+    position: absolute;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 800px; /* Ancho máximo del bloque */
+    background-color: #ffffff; /* Color de fondo del bloque */
+    padding: 20px; /* Espaciado interno del bloque */
+    border-radius: 10px; /* Borde redondeado del bloque */
+    z-index: 0; /* Asegura que el bloque esté detrás del banner */
 }
-
 .card {
-   
     width: 80px;
     border-radius: .75rem;
     background-size: cover;
@@ -102,7 +115,6 @@ body {
     overflow: hidden;
     border-radius: 2rem;
     margin: 0 10px;
-    display: flex;
     align-items: flex-end;
     transition: .6s cubic-bezier(.28,-0.03,0,.99);
     box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
@@ -163,6 +175,7 @@ input:checked + label .description {
 
 .card[for="c1"] {
     background-image: url('/img/lol.png')
+    
 }
 .card[for="c2"] {
     background-image: url('/img/no_lo_se.png');
@@ -172,4 +185,30 @@ input:checked + label .description {
 }
 .card[for="c4"] {
     background-image: url('/img/intel.png');
+}
+/* Estilos generales para dispositivos de todos los tamaños */
+
+/* Estilos específicos para dispositivos más pequeños, como tablets y móviles */
+@media screen and (max-width: 768px) {
+    /* Aquí van los estilos específicos para dispositivos más pequeños */
+}
+
+/* Estilos específicos para dispositivos aún más pequeños, como móviles en modo retrato */
+@media screen and (max-width: 480px) {
+    /* Aquí van los estilos específicos para dispositivos más pequeños */
+}
+/* Estilos específicos para dispositivos más pequeños */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Cambia la dirección del flujo a vertical */
+        align-items: flex-start; /* Alinea los elementos a la izquierda */
+    }
+
+    .navbar-nav {
+        margin-top: 10px; /* Espacio superior */
+    }
+
+    .navbar-nav .nav-item {
+        margin: 5px 0; /* Espaciado entre elementos */
+    }
 }
