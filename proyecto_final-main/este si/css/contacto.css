@@ -1,26 +1,38 @@
+.navbar {
+    max-width: 200%;
+    display: flex;
+    justify-content: space-between; /* Distribuye los elementos a los extremos */
+    align-items: center;
+    background-color: #0d98b1 !important; /* Color de fondo de la barra de navegación */
+    padding: 10px 20px; /* Espaciado interno */
+}
+.nav-item{
+    background-color: #0d98b1  
+}
+.navbar-brand img {
+    max-height: 30px; /* Reducir la altura máxima del logo */
+    width: auto; /* Ancho automático para mantener la proporción */
+    border-radius: 25px;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center; /* Centra los elementos verticalmente */
+}
+
+.navbar-nav .nav-item {
+    margin-right: 15px; /* Espaciado entre elementos */
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #333333;
+    font-display: #111;
 }
-.top-bar {
-    background-color: #242424; 
-    padding: 10px 0; 
-    text-align: left; 
-}
-#btnRegresar {
-    background-color: #ad0101; 
-    color: #050505; 
-    padding: 8px 20px; 
-    border: none; 
-    border-radius: 100px; 
-    cursor: pointer; 
-}
-#btnRegresar:hover {
-    background-color: #490606; 
-    color:#a7a7a7
-}
+
+
+
 .container {
     max-width: 80%;
     margin: 20px auto;
@@ -40,6 +52,10 @@ body {
 h1 {
     text-align: center;
     
+}
+h3{
+    text-align: center;
+    color: #000;
 }
 div {
     text-align: center;
@@ -65,4 +81,11 @@ li {
     
     
 }
+gmp-map {
+    display: flex;
+    height: 500px;
+    width: 1130px;
+
+  }
+
 

@@ -6,11 +6,30 @@
     <title>Detalles de la Obra de Arte - Ground Zero</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-      .navbar-brand img {
-          max-height: 30px; /* Reducir aún más la altura máxima del logo */
-          width: auto; /* Ancho automático para mantener la proporción */
-          border-radius: 25px;
-      }
+.navbar {
+    max-width: 200%;
+    display: flex;
+    justify-content: space-between; /* Distribuye los elementos a los extremos */
+    align-items: center;
+    background-color: #0d98b1 !important; /* Color de fondo de la barra de navegación */
+    padding: 10px 20px; /* Espaciado interno */
+}
+
+.navbar-brand img {
+    max-height: 30px; /* Reducir la altura máxima del logo */
+    width: auto; /* Ancho automático para mantener la proporción */
+    border-radius: 25px;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center; /* Centra los elementos verticalmente */
+}
+
+.navbar-nav .nav-item {
+    margin-right: 15px; /* Espaciado entre elementos */
+}
+      
   </style>
 
 </head>
