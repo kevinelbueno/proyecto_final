@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles de la Obra de Arte - Ground Zero</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+      .navbar-brand img {
+          max-height: 30px; /* Reducir aún más la altura máxima del logo */
+          width: auto; /* Ancho automático para mantener la proporción */
+          border-radius: 25px;
+      }
+  </style>
+
+</head>
+<body>
+
+  <!-- Contenido de detalles.html -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Ground Zero
+      <img src="/img/GROUNDZEROLOGO.png" alt="Logo de Ground Zero" >
+    </a> <!-- Enlace al logo -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="arte.html">Inicio <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="compra.html">Catálogo</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contactospage.html">Nosotros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="inicio_sesion.html">Inicio Sesión</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="carrrito.html">Carro <span id="cantidad-carrito" class="badge badge-light">0</span></a> 
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container mt-5">
+
+    <div class="row">
+      <div class="col-md-6">
+        <img src="/img/lolololo.png" class="img-fluid" alt="Obra de Arte">
+      </div>
+      <div class="col-md-6">
+        <h2>pasion</h2>
+        <p class="text-muted">Artista: kevin el pintor</p>
+        <p class="text-muted">Técnica: Óleo</p>
+        <p>"Tristeza Pintoresca": En un pueblo donde las casas son coloridas como arcoíris, sus habitantes 
+          llevan consigo una carga de melancolía que contrasta con la alegría de sus fachadas, revelando así un contraste entre la apariencia externa y la realidad interna.</p>
+        <p>Precio: $2000000</p>
+        <button type="button" class="btn btn-primary agregar-carrito">Agregar al Carrito</button>
+
+
+      </div>
+    </div>
+
+    <div class="row mt-5">
+      <div class="col">
+        <h3>Detalles</h3>
+        <ul>
+          <li>Dimensiones: 30 cm x 42 cm</li>
+          <li>Año de Creación: 2001</li>
+          <li>Estado: Nuevo</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row mt-5">
+      <div class="col">
+        <h3>Obras Relacionadas</h3>
+        <div class="card-deck">
+          <div class="card">
+            <img src="/img/intel.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Lago de los Susurros</h5>
+              <p class="card-text">Breve descripción de la obra.</p>
+              <a href="compra.html" class="btn btn-primary">Ver más</a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="/img/no_lo_se.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Reflejos de Ausencia</h5>
+              <p class="card-text">Breve descripción de la obra.</p>
+              <a href="compra.html" class="btn btn-primary">Ver más</a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="/img/tulo.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Puente los lamentos  </h5>
+              <p class="card-text">Breve descripción de la obra</p>
+              <a href="compra.html" class="btn btn-primary">Ver más</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <script src="/javascript/comprarr.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="/javascript/agregarAlCarrito.js"></script>
+
+</body>
+</html>

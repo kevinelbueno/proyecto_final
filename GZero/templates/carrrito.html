@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ground Zero - Galería de Arte</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/web/css/carrito.css">
+    <style>
+        .navbar-brand img {
+            max-height: 30px;
+            width: auto;
+            border-radius: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div id="menu-container"></div>
+    <script src="/web/js/menu.js"></script>
+
+    <!-- Sección del carrito de compras -->
+    <section class="carrito">
+        <div class="container">
+            <h2>Carrito de Compras</h2>
+            <div class="carrito-lista">
+                <!-- La lista de elementos del carrito se generará dinámicamente aquí -->
+            </div>
+            <div class="total">
+                <h3>Total:</h3>
+                <span class="total-precio">$0</span>
+            </div>
+            <button class="btn btn-primary pagar">Pagar</button>
+            <button class="btn btn-danger vaciar-carrito">Vaciar Carrito</button>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Tienda de Arte. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Enlace al script de JavaScript para el carrito -->
+    <script src="/web/js/carrito.js"></script>
+
+    <!-- Enlaces a los scripts de jQuery y Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
