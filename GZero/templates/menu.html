@@ -1,5 +1,9 @@
 <!-- /menu.html -->
-<link rel="stylesheet" href="/web/css/menu.css" />
+{% load static %}
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+<link rel="stylesheet" href="{% static 'styles/menu.css' %}" />
 <link
 rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -11,7 +15,7 @@ referrerpolicy="no-referrer"
     <div class="wrapper">
         <div class="logo">
           <a class="navbar-brand" href="">Ground Zero
-            <img src="/web/img/GROUNDZEROLOGO.png" alt="Logo de Ground Zero" >
+            <img src="{% static 'img/GROUNDZEROLOGO.png'%}" alt="Logo de Ground Zero" >
           </a>
         </div>
         <input type="radio" name="slide" id="menu_btn" />
@@ -20,7 +24,7 @@ referrerpolicy="no-referrer"
             <label for="cancel_btn" class="btn cancel_btn">
                 <i class="fas fa-times"></i>
             </label>
-            <li><a href="/web/html/home.html">inicio</a></li>
+            <li><a href="">inicio</a></li>
             <li><a href="/web/html/compra.html">catalogo</a></li>
             <li>
                 <a href="#" class="desktop_item">contactos</a>

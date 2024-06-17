@@ -1,14 +1,15 @@
 {% load static %}
-{% load bootstrap5 %}
-{% bootstrap_css %}
-{% bootstrap_javascript %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
     <meta charset="UTF-8"> <!-- Establece la codificación de caracteres -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura la vista para dispositivos móviles -->
     <title>Ground Zero - Galería de Arte</title> <!-- Establece el título de la página -->
     <link rel="stylesheet" href="{% static 'styles/home.css' %}"> <!-- Enlace a tu propia hoja de estilos -->
+
 
 </head>
 
@@ -24,8 +25,9 @@
 
 <!-- Sección de tarjetas animadas -->
 <div class="block">
-    <div class="tarjeta">
+   <div class="tarjeta">
         <div class="pan">
+        
         <!-- Primer tarjeta -->
         <input type="radio" name="slide" id="c1" checked>
         <label for="c1" class="card">
@@ -37,6 +39,7 @@
                 </div>
             </div>
         </label>
+
         <!-- Segunda tarjeta -->
         <input type="radio" name="slide" id="c2">
         <label for="c2" class="card">
@@ -48,6 +51,7 @@
                 </div>
             </div>
         </label>
+
         <!-- Tercera tarjeta -->
         <input type="radio" name="slide" id="c3">
         <label for="c3" class="card">
@@ -60,6 +64,7 @@
                 </div>
             
         </label>
+
         <!-- Cuarta tarjeta -->
         <input type="radio" name="slide" id="c4">
             <label for="c4" class="card">

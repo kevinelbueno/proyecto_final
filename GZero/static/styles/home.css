@@ -139,17 +139,17 @@ input:checked + label .description {
 }
 
 .card[for="c1"] {
-    background-image: url('/img/lol.png')
+    background-image: url('/static/img/lol.png');
     
 }
 .card[for="c2"] {
-    background-image: url('/web/img/no_lo_se.png');
+    background-image: url('/static/img/no_lo_se.png');
 }
 .card[for="c3"] {
-    background-image: url('/web/img/mama.png');
+    background-image: url('/static/img/mama.png');
 }
 .card[for="c4"] {
-    background-image: url('/web/img/intel.png');
+    background-image: url('/static/img/lolololo.png');
 }
 /* Estilos generales para dispositivos de todos los tamaños */
 
