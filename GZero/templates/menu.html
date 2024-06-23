@@ -24,63 +24,45 @@ referrerpolicy="no-referrer"
             <label for="cancel_btn" class="btn cancel_btn">
                 <i class="fas fa-times"></i>
             </label>
-            <li><a href="">inicio</a></li>
-            <li><a href="/web/html/compra.html">catalogo</a></li>
-            <li>
-                <a href="#" class="desktop_item">contactos</a>
+            <li><a href="/home">Inicio</a></li>
+
+            <li><a href="/tienda">Catalogo</a></li>
+            
+            <li><a href="#" class="desktop_item">Contactos</a>
                 <input type="checkbox" id="showDrop" />
-                <label for="showDrop" class="mobile_item">contactos</label>
+                <label for="showDrop" class="mobile_item">Contactos</label>
                 <ul class="drop_menu">
-                    <li><a href="/web/html/ubicacionnegocio.html">¿donde esta nuestra galeria?</a></li>
-                    <li><a href="/web/html/contactospage.html">redessociales </a></li>
-                    <li><a href="/web/html/contactos.html">contactar</a></li>
+                    <li><a href="/ubicacion">¿Donde esta nuestra galeria?</a></li>
+                    <li><a href="/redes">Redes Sociales </a></li>
+                    <li><a href="/contactar">Contactar</a></li>
                     
                 </ul>
             </li>
             <li>
-                <a href="#" class="desktop_item">GROUNDZEROLOGO</a>
+                <a href="#" class="desktop_item">Ground Zero</a>
                 <input type="checkbox" id="showMega" />
-                <label for="showMega" class="mobile_item">GROUNDZEROLOGO</label>
+                <label for="showMega" class="mobile_item">Ground Zero</label>
                 <div class="mega_box">
                     <div class="content">
                         <div class="row img_row">
                             <div class="services_img"></div>
                         </div>
                         <div class="row">
-                            <header>Artistas calificado</header>
-                            <ul class="mega_links first_links">
-                                <li><a href="#">Graphics</a></li>
-                                <li><a href="#">Web Design</a></li>
-                                <li><a href="#">Architecture</a></li>
-                                <li><a href="#">Ui / Ux</a></li>
-                            </ul>
-                        </div>
-                        <div class="row">
-                            <header>Obras de arte</header>
-                            <ul class="mega_links">
-                                <li><a href="#">Graphics</a></li>
-                                <li><a href="#">Web Design</a></li>
-                                <li><a href="#">Architecture</a></li>
-                                <li><a href="#">Ui / Ux</a></li>
-                            </ul>
-                        </div>
-                        <div class="row">
-                            <header> Estilos arte </header>
-                            <ul class="mega_links">
-                                <li><a href="#">Graphics</a></li>
-                                <li><a href="#">Web Design</a></li>
-                                <li><a href="#">Architecture</a></li>
-                                <li><a href="#">Ui / Ux</a></li>
+                            <header>Otros</header>
+                            <ul class="mega_links first">
+                                <li><a href="#">Artistas calificado</a></li>
+                                <li><a href="#">Obras de arte</a></li>
+                                <li><a href="#">Estilos arte </a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </li>
-            <li><a href="/web/html/carrrito.html">Carrito <span id="cantidad-carrito" class="badge badge-light">0</span></a> </a></li>
+            <li><a href="/carro">Carrito <span id="cantidad-carrito" class="badge badge-light">0</span></a> </a></li>
         </ul>
         <label for="menu_btn" class="btn menu_btn">
             <i class="fas fa-bars"></i>
         </label>
     </div>
 </nav>
-<script src="/web/js/carrito.js"></script>
+<script src="{% static 'js/carrito.js'%}"></script>

@@ -8,20 +8,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ground Zero - Galería de Arte</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/web/css/carrito.css">
-    <style>
-        .navbar-brand img {
-            max-height: 30px;
-            width: auto;
-            border-radius: 25px;
-        }
-    </style>
+    <link rel="stylesheet" href="{% static 'style/carrito.css'%}">
 </head>
 <body>
     <div id="menu-container"></div>
-    <script src="/web/js/menu.js"></script>
-
+    <script src="{% static 'js/menu.js'%}"></script>
+    
     <!-- Sección del carrito de compras -->
     <section class="carrito">
         <div class="container">

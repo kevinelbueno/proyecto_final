@@ -5,12 +5,20 @@ from django.shortcuts import render
 def home(request): 
     return render(request, "home.html") 
   
-def projects(request): 
-    return render(request, "projects.html") 
+def ubicacion(request): 
+    return render(request, "ubicacion.html") 
   
-def contact(request): 
-    return render(request, "contact.html")
-def index(request):
-    return render(request, "arte.html")
+def contacto(request): 
+    return render(request, "contactar.html")
+
+def tienda(request):
+    return render(request, "tienda.html")
+
 def menu(request):
     return render(request, "menu.html")
+
+def carro(request):
+    return render(request, "carro.html")
+
+def redes(request):
+    return render(request, "redes_sociales.html")
