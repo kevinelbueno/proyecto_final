@@ -9,7 +9,7 @@ class Artista(models.Model):
     email = models.EmailField(unique=True, max_length=100, blank=True, null=True)
 
     def __str__(self):
-        return str(self.nombre_Artista), str(self.email)
+        return str(self.nombre_Artista) + " " + str(self.email)
 
 class Arte(models.Model):
     id_Arte = models.AutoField(db_column='idArte', primary_key=True)
