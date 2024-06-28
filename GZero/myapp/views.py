@@ -25,7 +25,7 @@ def carro(request):
 def redes(request):
     return render(request, "redes_sociales.html")
 
-def detalles(request):
-    artes = Arte.objects.all()
-    context={"Arte":artes}
+def detalles(request, nombre_Arte):
+    artes = Arte.objects.get(nom = nombre_Arte)
+    context= artes.item_set.get(id)
     return render(request, "detalles2.html", context)
