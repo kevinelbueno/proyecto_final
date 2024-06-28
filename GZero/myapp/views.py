@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from .models import Artista, Arte
 # Create your views here.
   
 def home(request): 
@@ -12,7 +12,9 @@ def contacto(request):
     return render(request, "contactar.html")
 
 def tienda(request):
-    return render(request, "tienda.html")
+    arte = Arte.objects.all()
+    context={"Arte":arte}
+    return render(request, "tienda.html", context)
 
 def menu(request):
     return render(request, "menu.html")
@@ -22,3 +24,8 @@ def carro(request):
 
 def redes(request):
     return render(request, "redes_sociales.html")
+
+def detalles(request):
+    artes = Arte.objects.all()
+    context={"Arte":artes}
+    return render(request, "detalles2.html", context)
