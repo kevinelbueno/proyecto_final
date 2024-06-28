@@ -1,0 +1,68 @@
+<!-- /menu.html -->
+{% load static %}
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+<link rel="stylesheet" href="{% static 'styles/menu.css' %}" />
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+crossorigin="anonymous"
+referrerpolicy="no-referrer"
+/>
+<nav>
+    <div class="wrapper">
+        <div class="logo">
+          <a class="navbar-brand" href="">Ground Zero
+            <img src="{% static 'img/GROUNDZEROLOGO.png'%}" alt="Logo de Ground Zero" >
+          </a>
+        </div>
+        <input type="radio" name="slide" id="menu_btn" />
+        <input type="radio" name="slide" id="cancel_btn" />
+        <ul class="nav_links">
+            <label for="cancel_btn" class="btn cancel_btn">
+                <i class="fas fa-times"></i>
+            </label>
+            <li><a href="/home">Inicio</a></li>
+
+            <li><a href="/tienda">Catalogo</a></li>
+            
+            <li><a href="#" class="desktop_item">Contactos</a>
+                <input type="checkbox" id="showDrop" />
+                <label for="showDrop" class="mobile_item">Contactos</label>
+                <ul class="drop_menu">
+                    <li><a href="/ubicacion">¿Donde esta nuestra galeria?</a></li>
+                    <li><a href="/redes">Redes Sociales </a></li>
+                    <li><a href="/contactar">Contactar</a></li>
+                    
+                </ul>
+            </li>
+            <li>
+                <a href="#" class="desktop_item">Ground Zero</a>
+                <input type="checkbox" id="showMega" />
+                <label for="showMega" class="mobile_item">Ground Zero</label>
+                <div class="mega_box">
+                    <div class="content">
+                        <div class="row img_row">
+                            <div class="services_img"></div>
+                        </div>
+                        <div class="row">
+                            <header>Otros</header>
+                            <ul class="mega_links first">
+                                <li><a href="/agregar">agregar</a></li>
+                                <li><a href="/inicio_sesion">incio sesion</a></li>
+                                <li><a href="#">Estilos arte </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li><a href="/carro">Carrito <span id="cantidad-carrito" class="badge badge-light">0</span></a> </a></li>
+        </ul>
+        <label for="menu_btn" class="btn menu_btn">
+            <i class="fas fa-bars"></i>
+        </label>
+    </div>
+</nav>
+<script src="{% static 'js/carrito.js'%}"></script>
