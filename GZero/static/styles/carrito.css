@@ -1,0 +1,112 @@
+
+/* Estilos para la página del carrito de compras */
+
+.carrito {
+    margin-top: 80px; /* Ajusta este valor según la altura de tu barra de navegación */
+}
+.navbar-brand img {
+    max-height: 30px; /* Reducir aún más la altura máxima del logo */
+    width: auto; /* Ancho automático para mantener la proporción */
+}
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.carrito {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+}
+
+.carrito-lista {
+    margin-bottom: 20px;
+}
+
+.carrito-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.carrito-item img {
+    max-width: 100px;
+    margin-right: 20px;
+}
+
+.total {
+    text-align: right;
+}
+
+.total-precio {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #474545;
+    color: #fff;
+    padding: 3%;
+    text-align: center;
+}
+
+footer {
+    margin: 0;
+}
+
+.pagar {
+    background-color: #00ffff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.pagar:hover {
+    background-color: #0056b3;
+}
+
+.vaciar-carrito {
+    background-color: #ff0019;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.vaciar-carrito:hover {
+    background-color: #c82333;
+}

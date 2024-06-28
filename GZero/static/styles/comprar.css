@@ -1,0 +1,107 @@
+
+.productos {
+    margin-top: 80px; /* Ajusta este valor según la altura de tu barra de navegación */
+}
+.container-fluid img {
+    max-height: 50px; /* Reducir aún más la altura máxima del logo */
+    width: auto; /* Ancho automático para mantener la proporción */
+    border-radius: 50%;
+    position: relative;
+    background-color: #14d6e4;
+}
+
+
+.d-item  {
+    height: auto;
+    max-height: 100vh;
+    
+}
+
+
+.d-img {
+    max-height: 100vh;
+    filter: brightness(0.6);   
+    object-fit: cover; /* Ajustar la imagen para que cubra completamente el contenedor */
+    object-position: center top; /* Centrar la imagen dentro del contenedor */
+}
+
+.productos .card-body .btn-primary {
+    background-color: #025bff; /* Cambia el color de fondo del botón */
+    border: none; /* Elimina el borde del botón */
+}
+.btn-primary  {
+    margin-bottom: 10px; /* Espacio entre los botones hacia abajo */
+  }
+  .btn-primary  {
+    margin-right: 10px; /* Espacio entre los botones hacia abajo */
+  }
+.productos .card-body .btn-bol {
+    background-color: #025bff; /* Cambia el color de fondo del botón */
+    border: none; /* Elimina el borde del botón */
+}
+.productos .card-body .btn-bol:hover {
+    background-color: #00b7ff; /* Cambia el color de fondo del botón al pasar el cursor */
+}
+.productos .card-body .btn-bol button.active {
+    background-color: #093bdf;
+}
+
+
+.productos .card-body .btn-primary:hover {
+    background-color: #00b7ff; /* Cambia el color de fondo del botón al pasar el cursor */
+}
+
+
+
+.productos .card-body .btn-primary button.active {
+    background-color: #093bdf;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.productos .d-card {
+    box-shadow: 0px 2px 4px rgba(11, 173, 223, 0.2); 
+    min-width: 200px; /* Ajusta el ancho de la imagen al 100% del contenedor */
+    max-width: 700px;
+    height: auto;
+    overflow: hidden;
+    margin-bottom:20px; /* Espacio entre tarjetas */
+    background-color: #00ffd5; /* Color de fondo de los elementos de producto */
+    margin-right: 30px; /* Añade un margen derecho de 20px entre los elementos */
+    margin-bottom: 30px; /* Espacio entre las filas */
+    margin: 20px;
+    border-radius: 5% ;
+    text-align: center;
+    float: left;
+    width: calc(33.33% - 40px); /* Ajusta el ancho para mostrar 3 elementos por fila */
+   
+    
+    
+    
+}
+  
+.card-img-top {
+    
+    border-radius: 8px;
+    height: auto; /* Permitir que la altura se ajuste automáticamente para mantener la proporción */
+    filter: brightness(0.6);
+    
+    
+
+  
+}
+    
+
+  .card-group{
+    width: 100%; /* Establece el ancho del contenedor al 80% del ancho del viewport */
+    margin: auto; /* Centra el contenedor horizontalmente */
+    height: auto; /* Permitir que la altura se ajuste automáticamente para mantener la proporción */
+    flex-direction: row;
+    
+    
+}
