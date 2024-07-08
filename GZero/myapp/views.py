@@ -37,8 +37,8 @@ def redes(request):
     return render(request, 'redes.html')
 
 # Vista para detalles de una obra de arte específica
-def detalles2(request):
-    return render(request, 'detalles2.html')
+def detalles(request):
+    return render(request, 'detalles.html')
 
 # Vista para el registro de usuarios
 def signup(request):
