@@ -1,46 +1,23 @@
+/* static/styles/carrito.css */
 
 /* Estilos para la página del carrito de compras */
 
 .carrito {
     margin-top: 80px; /* Ajusta este valor según la altura de tu barra de navegación */
+    background-color: #f9f9f9;
+    padding: 50px 0;
 }
-.navbar-brand img {
-    max-height: 30px; /* Reducir aún más la altura máxima del logo */
-    width: auto; /* Ancho automático para mantener la proporción */
-}
+
 .container {
     width: 90%;
     margin: 0 auto;
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-}
-
-header h1 {
-    margin: 0;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.carrito {
-    background-color: #f9f9f9;
-    padding: 50px 0;
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #333;
 }
 
 .carrito-lista {
@@ -53,60 +30,74 @@ nav ul li a {
     margin-bottom: 10px;
     border-bottom: 1px solid #ccc;
     padding-bottom: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .carrito-item img {
     max-width: 100px;
     margin-right: 20px;
+    border-radius: 5px;
+}
+
+.carrito-item .info {
+    flex: 1;
+}
+
+.carrito-item .info h4 {
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+.carrito-item .info .precio {
+    font-weight: bold;
+    color: #777;
 }
 
 .total {
     text-align: right;
+    margin-top: 20px;
+}
+
+.total h3 {
+    margin: 0;
+    font-size: 1.5rem;
 }
 
 .total-precio {
     font-weight: bold;
-    font-size: 18px;
+    font-size: 1.5rem;
+    color: #333;
 }
 
-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: #474545;
-    color: #fff;
-    padding: 3%;
-    text-align: center;
-}
-
-footer {
-    margin: 0;
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .pagar {
     background-color: #00ffff;
     color: #fff;
     border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
 }
 
 .pagar:hover {
-    background-color: #0056b3;
+    background-color: #00bfff;
 }
 
 .vaciar-carrito {
     background-color: #ff0019;
     color: #fff;
     border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    margin-top: 10px;
 }
 
 .vaciar-carrito:hover {
     background-color: #c82333;
 }
+
+

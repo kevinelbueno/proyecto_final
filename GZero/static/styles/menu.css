@@ -1,4 +1,14 @@
-
+.pie_depagina {
+    
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #20969e;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  margin: 0;
+}
 .btn {
   background-color: #00ffd5;
   color: #fff;

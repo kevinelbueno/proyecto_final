@@ -1,0 +1,99 @@
+<!-- templates/base.html -->
+{% load static %}
+{% load bootstrap5 %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Ground Zero{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'styles/menu.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    {% block extra_head %}
+    {% endblock %}
+</head>
+<body>
+    <!-- Menú -->
+    <nav>
+        <div class="wrapper">
+            <div class="logo">
+                <a class="navbar-brand" href="{% url 'home' %}">Ground Zero
+                    <img src="{% static 'img/GROUNDZEROLOGO.png' %}" alt="Logo de Ground Zero">
+                </a>
+            </div>
+            <input type="radio" name="slide" id="menu_btn" />
+            <input type="radio" name="slide" id="cancel_btn" />
+            <ul class="nav_links">
+                <label for="cancel_btn" class="btn cancel_btn">
+                    <i class="fas fa-times"></i>
+                </label>
+                <li><a href="{% url 'home' %}">Inicio</a></li>
+                <li><a href="{% url 'tienda' %}">Catálogo</a></li>
+                <li><a href="#" class="desktop_item">Contactos</a>
+                    <input type="checkbox" id="showDrop1" />
+                    <label for="showDrop1" class="mobile_item">Contactos</label>
+                    <ul class="drop_menu">
+                        <li><a href="{% url 'ubicacion' %}">¿Dónde está nuestra galería?</a></li>
+                        <li><a href="{% url 'redes' %}">Redes Sociales</a></li>
+                        <li><a href="{% url 'contactar' %}">Contactar</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="desktop_item">Sesión</a>
+                    <input type="checkbox" id="showDrop2" />
+                    <label for="showDrop2" class="mobile_item">Sesión</label>
+                    <ul class="drop_menu">
+                        {% if user.is_authenticated %}
+                        <li><a href="{% url 'home' %}">Sesión completada</a></li>
+                        <li><a href="{% url 'add_art' %}">Agregar arte</a></li>
+                        <li><a href="{% url 'art_list' %}">Vista de tarea</a></li>
+                        <li><a href="{% url 'signout' %}">Logout</a></li>
+                        {% else %}
+                        <li><a href="{% url 'signin' %}">Login</a></li>
+                        <li><a href="{% url 'signup' %}">Register</a></li>
+                        {% endif %}
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="desktop_item">Ground Zero</a>
+                    <input type="checkbox" id="showMega" />
+                    <label for="showMega" class="mobile_item">Ground Zero</label>
+                    <div class="mega_box">
+                        <div class="content">
+                            <div class="row img_row">
+                                <div class="services_img"></div>
+                            </div>
+                            <div class="row">
+                                <header>Otros</header>
+                                <ul class="mega_links first">
+                                    <li><a href="#">Artistas calificados</a></li>
+                                    <li><a href="#">Obras de arte</a></li>
+                                    <li><a href="#">Estilos de arte</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="{% url 'carro' %}">Carrito <span id="cantidad-carrito" class="badge badge-light">0</span></a></li>
+            </ul>
+            <label for="menu_btn" class="btn menu_btn">
+                <i class="fas fa-bars"></i>
+            </label>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <div class="pie_depagina">
+            <p>&copy; 2024 Tienda de Arte. Todos los derechos reservados.</p> <!-- Información de derechos de autor -->
+        </div>
+    </footer>
+</body>
+</html>

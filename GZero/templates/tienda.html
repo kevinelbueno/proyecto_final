@@ -1,25 +1,14 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    {% load bootstrap5 %}
-    {% bootstrap_css %}
-    {% bootstrap_javascript %}
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ground Zero - Galería de Arte</title>
-    <link rel="stylesheet" href="{% static 'styles/comprar.css' %}">
+{% extends 'base.html' %}
+{% load static %}  <!-- Asegúrate de agregar esta línea -->
 
+{% block title %}Ground Zero - Galería de Arte{% endblock %}
 
-</head>
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'styles/comprar.css' %}">
+{% endblock %}
 
-<body>
-    
-  <div id="menu-container"></div>
-  <script src="{% static 'js/menu.js' %}"></script>
-    
-
-   
+{% block content %}
+<body> 
 <!-- Sección de productos -->
 <section class="productos">
   
@@ -145,5 +134,8 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="{% static 'js/agregarAlCarrito.js' %}"></script>
+{% block extra_scripts %}{% endblock %}
+{% endblock %}
+
 </body>
 </html>

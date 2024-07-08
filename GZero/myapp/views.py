@@ -94,7 +94,8 @@ def art_list(request):
 @login_required
 def signout(request):
     logout(request)
-    return redirect('home')
+    return redirect('home')  # O redirige a la página de inicio de sesión u otra página de tu elección
+
 
 # Vista para los detalles de una obra de arte específica
 def art_detail(request, art_id):

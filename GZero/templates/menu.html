@@ -33,7 +33,7 @@ referrerpolicy="no-referrer"
                 <label for="showDrop" class="mobile_item">Contactos</label>
                 <ul class="drop_menu">
                     <li><a href="{% url 'ubicacion' %}">¿Donde esta nuestra galeria?</a></li>
-                    <li><a href="/redes">Redes Sociales </a></li>
+                    <li><a href="{% url 'redes' %}">Redes Sociales </a></li>
                     <li><a href="{% url 'contactar' %}">Contactar</a></li>
                     
                     
@@ -45,7 +45,7 @@ referrerpolicy="no-referrer"
               <ul class="drop_menu">
                 {% if user.is_authenticated %}
                 <li class="nav-item">
-                  <a href="{% url 'home'}" class="nav-link"
+                  <a href="{% url 'home' %}" class="nav-link"
                     >sesioncompretada</a
                   >
                 </li>
@@ -56,7 +56,7 @@ referrerpolicy="no-referrer"
                   <a href="{% url 'art_list' %}" class="nav-link">vista de tarea</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/home">Logout</a>
+                  <a class="nav-link" href="{% url 'home' %}">Logout</a>
                 </li>
                 {% else %}
                 <li class="nav-item">
