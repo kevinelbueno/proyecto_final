@@ -24,20 +24,51 @@ referrerpolicy="no-referrer"
             <label for="cancel_btn" class="btn cancel_btn">
                 <i class="fas fa-times"></i>
             </label>
-            <li><a href="/home">Inicio</a></li>
+            <li><a href="{% url 'home' %}">Inicio</a></li>
 
-            <li><a href="/tienda">Catalogo</a></li>
+            <li><a href="{% url 'tienda' %}">Catalogo</a></li>
             
             <li><a href="#" class="desktop_item">Contactos</a>
                 <input type="checkbox" id="showDrop" />
                 <label for="showDrop" class="mobile_item">Contactos</label>
                 <ul class="drop_menu">
-                    <li><a href="/ubicacion">¿Donde esta nuestra galeria?</a></li>
+                    <li><a href="{% url 'ubicacion' %}">¿Donde esta nuestra galeria?</a></li>
                     <li><a href="/redes">Redes Sociales </a></li>
-                    <li><a href="/contactar">Contactar</a></li>
+                    <li><a href="{% url 'contactar' %}">Contactar</a></li>
+                    
                     
                 </ul>
             </li>
+            <li><a href="#" class="desktop_item">sesion</a>
+              <input type="checkbox" id="showDrop" />
+              <label for="showDrop" class="mobile_item">sesion</label>
+              <ul class="drop_menu">
+                {% if user.is_authenticated %}
+                <li class="nav-item">
+                  <a href="{% url 'home'}" class="nav-link"
+                    >sesioncompretada</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a href="{% url 'add_art' %}" class="nav-link">agregar arte</a>
+                </li>
+                <li class="nav-item">
+                  <a href="{% url 'art_list' %}" class="nav-link">vista de tarea</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/home">Logout</a>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                  <a href="{% url 'signin' %}" class="nav-link">Login</a>
+                </li>
+                <li class="nav-item">
+                  <a href="{% url 'signup'%}" class="nav-link">Register</a>
+                </li>
+                {% endif %}
+                  
+              </ul>
+          </li>
             <li>
                 <a href="#" class="desktop_item">Ground Zero</a>
                 <input type="checkbox" id="showMega" />
@@ -50,15 +81,15 @@ referrerpolicy="no-referrer"
                         <div class="row">
                             <header>Otros</header>
                             <ul class="mega_links first">
-                                <li><a href="/agregar">agregar</a></li>
-                                <li><a href="/inicio_sesion">incio sesion</a></li>
+                                <li><a href="#">Artistas calificado</a></li>
+                                <li><a href="#">Obras de arte</a></li>
                                 <li><a href="#">Estilos arte </a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </li>
-            <li><a href="/carro">Carrito <span id="cantidad-carrito" class="badge badge-light">0</span></a> </a></li>
+            <li><a href="{% url 'carro' %}">Carrito <span id="cantidad-carrito" class="badge badge-light">0</span></a> </a></li>
         </ul>
         <label for="menu_btn" class="btn menu_btn">
             <i class="fas fa-bars"></i>

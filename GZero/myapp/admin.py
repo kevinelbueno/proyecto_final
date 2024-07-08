@@ -1,6 +1,7 @@
-from django.contrib import admin
-from .models import Arte, Artista
-# Register your models here.
+# myapp/admin.py
 
-admin.site.register(Arte)
+from django.contrib import admin
+from .models import Art, Artista  # Corrige 'Arte' a 'Art'
+
+admin.site.register(Art)
 admin.site.register(Artista)
