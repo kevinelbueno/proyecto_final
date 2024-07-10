@@ -1,0 +1,24 @@
+<!-- templates/art_detail.html -->
+{% load static %}
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Detail</title>
+    <link href="{% static 'styles/art_detail.css' %}" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h2>{{ art.art_name }}</h2>
+        <p><strong>Author:</strong> {{ art.author }}</p>
+        <p><strong>Price:</strong> ${{ art.price }}</p>
+        <p><strong>Style:</strong> {{ art.style }}</p>
+        <img src="{{ art.image.url }}" alt="{{ art.art_name }}" class="img-fluid">
+        <p><strong>Description:</strong> {{ art.description }}</p>
+    </div>
+</body>
+</html>
